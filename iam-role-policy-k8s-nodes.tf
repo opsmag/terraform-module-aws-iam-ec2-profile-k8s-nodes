@@ -1,5 +1,5 @@
 resource "aws_iam_role_policy" "this" {
-  name = "${var.project_name}-ec2-profile-k8s-nodes"
+  name = "${var.cluster_name}-ec2-profile-k8s-nodes"
   role = aws_iam_role.this.*.id[0]
 
   policy = <<EOF
